@@ -1,25 +1,27 @@
 # BeautySalon
 
-#Zerina Dragnić 17149
+#### Zerina Dragnić 17149
 
 Stranica informativnog karaktera o uslugama salona.
 
 
-*** SPIRALA 1 ***
 
-I  - Šta je urađeno?
+## SPIRALA 1
+
+**I  - Šta je urađeno?**
 Napravljeno je 5 html fajlova. Na pocetnoj stranici nalaze se 2 forme (anketa i newsletter), te jedna forma (slanje poruke) na kontakt podstranici. Skice se nalaze u folderu Skice (5 skica za mobitel, 5 skica za desktop). Koristen je grid view, uradjen je responsive, te je koristen media query. Napravljen je meni koji se nalazi na svakoj podstranici.
 
-II  - Šta nije urađeno?
+**II  - Šta nije urađeno?**
 /
 
-III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)
-/
+**III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)**
+Nema primijecenih bugova.
 
-IV  - Bug-ovi koje ste primijetili ali ne znate rješenje
-/
+**IV  - Bug-ovi koje ste primijetili ali ne znate rješenje**
+Nema primijecenih bugova.
 
-V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi
+
+**V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi**
 
 pocetna.html - Pocetna stranica 
 onama.html - Podstranica koja sadrzi informacije o salonu.
