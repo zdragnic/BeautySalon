@@ -110,6 +110,9 @@ h1{
 
 }
 
+ul li{
+	list-style: none;
+}
 
 #nwrapper ul{
 	padding-top: 25px;
