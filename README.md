@@ -17,11 +17,12 @@ Napravljeno je 5 html fajlova. Na pocetnoj stranici nalaze se 2 forme (anketa i 
 
 **III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)**
 
-Nema primijecenih bugova.
+Prilikom testiranja na svom laptopu sve dobro radi.
 
 **IV  - Bug-ovi koje ste primijetili ali ne znate rješenje**
 
-Nema primijecenih bugova.
+Prilikom testiranja na svom laptopu sve dobro radi.
+
 
 
 **V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi**
