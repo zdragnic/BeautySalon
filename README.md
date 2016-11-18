@@ -47,7 +47,6 @@ style.css - sadrzi css kod za stranicu
 
 **I  - Šta je urađeno?** 
 Uradjene su validacije formi (anketu nisam validirala jer nije bilo potrebe), poruke se ispisuju u labeli iznad dugmica za submit,
-
 napravljen je localStorage na formi na podstranici kontakt.html, napravljen je carousel na podstranici onama.html, te je uradjen
 ajax tako da se ucitava samo ono sto je promijenjeno.
 
