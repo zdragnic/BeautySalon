@@ -68,6 +68,8 @@ Prilikom refresha podstranice vraca me na pocetnu tj. (index.html), ne znam je l
 
 pocetna.html - Pocetna stranica 
 
+index.html - sadrzi ono sto ostaje isto na svim stranicama (header i footer)
+
 onama.html - Podstranica koja sadrzi informacije o salonu.
 
 kusluge.html - Podstranica koja sadrzi informacije o kozmetickim uslugama koje salon nudi.
