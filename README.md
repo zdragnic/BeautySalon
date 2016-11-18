@@ -48,7 +48,7 @@ style.css - sadrzi css kod za stranicu
 **I  - Šta je urađeno?** 
 Uradjene su validacije formi (anketu nisam validirala jer nije bilo potrebe), poruke se ispisuju u labeli iznad dugmica za submit,
 napravljen je localStorage na formi na podstranici kontakt.html, napravljen je carousel na podstranici onama.html, te je uradjen
-ajax tako da se ucitava samo ono sto je promijenjeno.
+ajax tako da se ucitava samo ono sto je promijenjeno. Ostavila sam da mi se forma submita prilikom klika na dugme, (da sam dodala onsubmit="return false;" ne bi se refreshalo i submitalo).
 
 **II  - Šta nije urađeno?**
 /
