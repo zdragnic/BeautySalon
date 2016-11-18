@@ -72,7 +72,7 @@ onama.html - Podstranica koja sadrzi informacije o salonu.
 
 kusluge.html - Podstranica koja sadrzi informacije o kozmetickim uslugama koje salon nudi.
 
-fusluge.html - Podstranica koja sadrzi informacije o frizerskim uslugama salona.
+ffusluge.html - Podstranica koja sadrzi informacije o frizerskim uslugama salona.
 
 kontakt.html - Podstranica koja sadrzi formu za slanje poruka, mapu sa lokacijom.
 
