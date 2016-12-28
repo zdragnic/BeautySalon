@@ -1,0 +1,26 @@
+<?php
+
+?>
+	<div class="kolona cetri">
+		<div class="underline"> <h1>Kontakt</h1> </div>
+
+		<h2>Pošaljite nam poruku</h2>
+		<form name="kontakt-forma" onsubmit="return validirajKontakt()"  action= "#">
+		Ime i prezime:<br>
+  		<input type="text" name="imeprezime" value=" " class="kontakt-imemail" id="kontakt-ime" onchange="validirajKontakt();" > <br> 
+  		Email:<br>
+  		<input type="text" name="email" value=" " class="kontakt-imemail" id="kontakt-mail" onchange="validirajKontakt();" > <br>
+  		Poruka:<br>
+  		<textarea  name="poruka" value=" " class="kontakt-poruka" id="kontakt-poruka" onchange="validirajKontakt();" > </textarea>  <br> 
+  		<label id="kon-labela"></label> <br><br>
+  		<input type="submit" value="Pošalji!" class="dugme" id="kon-dugme" name="kontaktdugme"> <br>
+
+		</form>
+
+		<div class="underline"><h1>Gdje se nalazimo?</h1></div>
+		<div id="mapa">
+			<br>
+			<img src="Slike/mapa.png" alt=""> <br><br>
+		</div>
+	</div>
+	
