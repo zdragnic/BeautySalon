@@ -88,7 +88,7 @@ js.js - javascript fajl sa svim funkcijama
 ## SPIRALA 3
 
 **I  - Šta je urađeno?** 
-Uradjene su validacije formi sa php-om, napravljen je login, uradjena je serijalizacija podataka sa formi, te serijalizacija usluga koje salon nudi. Admin moze editovati podatke koji se odnose na usluge salona, te moze pregledati u pdf izvjestaju rezultate ankete, i poruke, a u csv fajlu se nalaze mailovi sa newsletter forme. Napravljena je pretraga po dva polja (naziv usluge i cijena), pretrazuje se kusluge.xml. Uradjen je deploy stranice na openshift.
+Uradjene su validacije formi sa php-om, napravljen je login, uradjena je serijalizacija podataka sa formi, te serijalizacija usluga koje salon nudi. Admin moze editovati podatke koji se odnose na usluge salona, te moze pregledati u pdf izvjestaju rezultate ankete, i poruke, a u csv fajlu se nalaze mailovi sa newsletter forme. Napravljena je pretraga po dva polja (naziv usluge i cijena), pretrazuje se kusluge.xml. Uradjen je deploy stranice na openshift. LINK ----> http://beautysalon-beautysalon.44fs.preview.openshiftapps.com/
 
 **II  - Šta nije urađeno?**
 /
