@@ -1,6 +1,5 @@
 
 var brojac;
-
 function prikaz(naziv){
 var ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function() {// Anonimna funkcija
@@ -111,12 +110,13 @@ function validirajKontakt() {
     var ime = document.getElementById('kontakt-ime');
     var poruka = document.getElementById('kontakt-poruka');
     document.getElementById("kon-labela").innerText ='';
-
+    var valime= /^[a-žA-Ž]*[\s][a-žA-Ž]*$/;
+    var vporuka=/^[a-žA-Ž0-9][a-žA-Ž0-9\s.,?:+]*$/;
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if(ime.value === ''){
+    if(!valime.test(ime.value) || ime.value === ""){
     document.getElementById('kon-labela').style.visibility = "visible";
     document.getElementById('kon-labela').style.color = "#a63955";
-    document.getElementById("kon-labela").innerText ='Unesite vase ime i prezime!';  
+    document.getElementById("kon-labela").innerText ='Unesite vase ime i prezime(Ime_Prezime)!';  
     ime.focus();
     return false;
     }
@@ -127,10 +127,10 @@ function validirajKontakt() {
     email.focus();
     return false;
  }  
-    else if(poruka.value === ''){
+    else if(!vporuka.test(poruka.value) || poruka.value === ""){
     document.getElementById('kon-labela').style.visibility = "visible";
     document.getElementById('kon-labela').style.color = "#a63955";
-    document.getElementById("kon-labela").innerText ='Unesite vasu poruku!';  
+    document.getElementById("kon-labela").innerText ='Poruka moze sadrzavati slova,brojeve i znakove ?.,:+, te pocinje slovom!';  
     poruka.focus();
     return false;
 
