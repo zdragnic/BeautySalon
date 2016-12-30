@@ -83,3 +83,56 @@ Folder Slike- sadrzi slike sa stranice
 style.css - sadrzi css kod za stranicu
 
 js.js - javascript fajl sa svim funkcijama
+
+
+## SPIRALA 3
+
+**I  - Šta je urađeno?** 
+Uradjene su validacije formi sa php-om, napravljen je login, uradjena je serijalizacija podataka sa formi, te serijalizacija usluga koje salon nudi. Admin moze editovati podatke koji se odnose na usluge salona, te moze pregledati u pdf izvjestaju rezultate ankete, i poruke, a u csv fajlu se nalaze mailovi sa newsletter forme. Napravljena je pretraga po dva polja (naziv usluge i cijena), pretrazuje se kusluge.xml. Uradjen je deploy stranice na openshift.
+
+**II  - Šta nije urađeno?**
+/
+
+**III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)**
+/
+
+**IV  - Bug-ovi koje ste primijetili ali ne znate rješenje**
+/
+
+**V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi**
+
+
+pocetna.html - Pocetna stranica 
+
+index.php - sadrzi ono sto ostaje isto na svim stranicama (header i footer)
+
+onama.html - Podstranica koja sadrzi informacije o salonu.
+
+kusluge.php - Podstranica koja sadrzi informacije o kozmetickim uslugama koje salon nudi.
+
+ffusluge.php - Podstranica koja sadrzi informacije o frizerskim uslugama salona.
+
+kontakt.php - Podstranica koja sadrzi formu za slanje poruka, mapu sa lokacijom.
+
+Folder Slike- sadrzi slike sa stranice
+
+style.css - sadrzi css kod za stranicu
+
+js.js - javascript fajl sa svim funkcijama
+
+pretraga.php - podstranica za pretragu
+
+login.php , logout.php, session.php - fajlovi potrebni za login
+
+livesearch.php - php fajl za pretragu
+
+admin.php- adminova pocetna stranica
+
+radsapodacima.php - adminova podstranica za editovanje podataka
+
+anketarez.php - rezultati ankete koji se prikazuju korisniku klikom na dugme rezultati
+
+fpdf181 folder - fajl za rad sa pdfom
+
+lib - fajlovi potrebni za piechart na rezultatima ankete
+
