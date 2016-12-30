@@ -136,3 +136,13 @@ fpdf181 folder - fajl za rad sa pdfom
 
 lib - fajlovi potrebni za piechart na rezultatima ankete
 
+Admin.xml - admin podaci
+
+Anketa.xml - rezultati ankete
+
+Fuskuge.xml i Kusluge.xml - usluge salona
+
+Kontakt.xml - poruke sa kontakt podstranice
+
+Newsletter.xml - mailovi sa newsletter fome
+
