@@ -102,9 +102,8 @@ Uradjene su validacije formi sa php-om, napravljen je login, uradjena je serijal
 **V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi**
 
 
-pocetna.html - Pocetna stranica 
 
-index.php - sadrzi ono sto ostaje isto na svim stranicama (header i footer)
+index.php - Pocetna stranica 
 
 onama.html - Podstranica koja sadrzi informacije o salonu.
 
