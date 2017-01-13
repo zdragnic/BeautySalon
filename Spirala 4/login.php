@@ -13,20 +13,24 @@ $veza->exec("set names utf8");
 $username= htmlspecialchars($_POST['username']);
 $password= htmlspecialchars($_POST['password']);  
      
-$rezultati=$veza->query("SELECT id,username,password FROM `korisnici` order by id asc;");
- if (!$rezultati) {
+$query=$veza->prepare("SELECT username, password FROM `korisnici` WHERE `username`=? AND `password`=? ;");
+$query->execute([$username, $password]);
+$user = $query->fetch();
+
+ if (!$query) {
           $greska = $veza->errorInfo();
           print "SQL greška: " . $greska[2];
           exit();
      }       
 
-foreach($rezultati as $korisnik){
-if (strcmp($username ,$korisnik['username']) && strcmp($password, $korisnik['password'])) {
+//foreach($rezultati as $korisnik){
+//if (strcmp($username ,$korisnik['username']) && strcmp($password, $korisnik['password'])) 
+    if($user != FALSE){
 $_SESSION['login_user']= $username;
 header("location: admin.php");
 } 
 }
-}
+
 $error = "Greska username ili pass!";
     
 }

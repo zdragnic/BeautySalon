@@ -34,8 +34,6 @@ include('./fpdf181/fpdf.php');
 <ul id="TopNav" class="topnav">
    <li> <a href="admin.php"> DOWNLOAD </a></li>
     <li> <a href="radsapodacima.php"> RAD SA PODACIMA </a></li>
-	<li> <a href="#" onclick="prikaz('ffusluge.php')"> FRIZERSKE USLUGE </a></li>
-	<li> <a href="kusluge1.php"> KOZMETIČKE USLUGE </a></li>
 	<li> <a href="logout.php"> LOGOUT </a></li>
 
 

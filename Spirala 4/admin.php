@@ -31,8 +31,6 @@ include('./fpdf181/fpdf.php');
 <ul id="TopNav" class="topnav">
     <li> <a href="admin.php"> DOWNLOAD </a></li>
     <li> <a href="radsapodacima.php"> RAD SA PODACIMA </a></li>
-	<li> <a href="#" onclick="prikaz('ffusluge.php')"> FRIZERSKE USLUGE </a></li>
-	<li> <a href="kusluge1.php"> KOZMETIČKE USLUGE </a></li>
 	<li> <a href="logout.php"> LOGOUT </a></li>
 
 
@@ -189,15 +187,17 @@ $rezultat = $veza->query("INSERT INTO `poruka` (`id`, `imeprezime`, `email`, `po
     
 }
 // generisanje pdfa csv
-$filexml='Newsletter.xml';
-if (file_exists($filexml)) {
-    $xml = simplexml_load_file($filexml);
+    
+//$filexml='Newsletter.xml';
+//if (file_exists($filexml)) {
+   // $xml = simplexml_load_file($filexml);
+$upit= $veza->query("SELECT * FROM `newsletter` order by id asc;")->fetchAll(PDO::FETCH_OBJ);
 $f = fopen('newsletter.csv', 'w');
-foreach ($xml->newsletter as $nsl) {
+foreach ($upit as $nsl) {
     fputcsv($f, get_object_vars($nsl),',','"');
 }
 fclose($f);
-}
+//}
 
 $pdf = new FPDF();
 $pdf->AddPage();
