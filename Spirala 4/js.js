@@ -1,47 +1,5 @@
 
-var brojac;
-function prikaz(naziv){
-var ajax = new XMLHttpRequest();
-    ajax.onreadystatechange = function() {// Anonimna funkcija
-
-        //ako je status 200 sve ok pa moze ucitat 
-        if (ajax.readyState == 4 && ajax.status == 200){
-            document.getElementById("main").innerHTML = ajax.responseText;
-            
-            brojac=1;
-
-        var zz= localStorage.imee;
-        var yy= localStorage.maill;
-
-          //da mi scrolla na main odmah 
-
-        if(naziv === 'onama.html') prikaziSliku(brojac);        
-        else if(naziv === 'kontakt.html'){
-     if(zz == undefined || yy== undefined){
-     localStorage.imee = "";
-     localStorage.maill = "";
-     localStorage.porukaa = "";
-    }
-        //localstorage za kontakt formu
-        document.getElementById("kontakt-ime").value = localStorage.imee;
-        document.getElementById("kontakt-mail").value = localStorage.maill;
-        document.getElementById("kontakt-poruka").value = localStorage.porukaa;
-}
-        
-              
-  }
-        //nije ok
-        if (ajax.readyState == 4 && ajax.status == 404)
-            document.getElementById("main").innerHTML = "Greska: nepoznat URL";    
-    }
-
-  
-     ajax.open("GET", naziv, true);
-
-     ajax.send();
-
-     return false;
-    }
+   
 
 
  //funkcija za prikaz menija na mobitelima
@@ -59,24 +17,6 @@ var ajax = new XMLHttpRequest();
     } else {
         x.className = "topnav";
     }
-}
-
-//funkcija za one slike -> carousel
-
-function listajDugme(n) {
-    prikaziSliku(brojac += n);
-}
-
-function prikaziSliku(n) {
-    var i;
-    var x = document.getElementsByClassName("slajd");
-    if (n > x.length) {brojac = 1} //ako je na zadnjoj resetuje brojac da moze desno ici
-    if (n < 1) {brojac = x.length} ; //ako je na prvoj-1 resetuje na zadnju da moze lijecvo ici
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; //ove ne prikazuje
-    }
-    x[brojac-1].style.display = "block"; //da samo prikaze onu na kojoj je brojac
-  
 }
 
 

@@ -14,6 +14,7 @@ include('./fpdf181/fpdf.php');
         var theHash = "#main";
         $("html, body").animate({scrollTop:$(theHash).offset().top}, 800);
       });
+        
     </script>
 
 </head>
@@ -109,6 +110,8 @@ if(isset($_REQUEST['mijenjanjek'])){
     $red = $_REQUEST['redk'];
     $i='nazivk'.(string)$red ;
     $pr='cijenak'.(string)$red ;
+    $autor=$_SESSION['login_user'];
+
     
     $n=$_REQUEST[$i];
     $c=$_REQUEST[$pr];
@@ -138,9 +141,11 @@ $kusluga->cijena= $c;
     $xml->asXML("Kusluge.xml");
          
     //edit u bazi
+         $autorid= $veza->query("SELECT id FROM `korisnici` WHERE username LIKE '$autor';");
+        $aid=$autorid->fetchColumn();    
     
-         $r= $veza->query("UPDATE `kusluge` SET `nazivusluge` = '$n', `cijena` = '$c' WHERE `id` = '$red';");    
-
+        $r= $veza->query("UPDATE `kusluge` SET `nazivusluge` = '$n', `cijena` = '$c' WHERE `id` = '$red';");    
+        $upitopis= $veza->query("UPDATE `uslugedetalji` SET  `opis`='Ovo je defaultni opis usluge. Stranica je u izradi. Pravi opisi naknadno ce biti dodani.', `autor`='$aid' WHERE `nazivusluge` LIKE '$n';");
             
 }  
 }    
@@ -199,8 +204,9 @@ break;
   }
     $xml->save("Kusluge.xml");
      //iz baze
-      $rezultat = $veza->query("DELETE FROM `kusluge` WHERE `kusluge`.`id` = $red ");
     
+     $opis= $veza->query("DELETE FROM `uslugedetalji` WHERE `nazivusluge` LIKE '$n';");
+      $rezultat = $veza->query("DELETE FROM `kusluge` WHERE `kusluge`.`id` = $red ");
       if (!$rezultat) {
           $greska = $veza->errorInfo();
           print "SQL greška: " . $greska[2];
@@ -251,7 +257,8 @@ if(isset($_REQUEST['dodavanjef'])){
 if(isset($_REQUEST['dodavanjek'])){
     $n=$_REQUEST['nazivk'];
     $c=$_REQUEST['cijenak'];
-   
+    $autor=$_SESSION['login_user'];
+    
     
     if(!preg_match('/^[a-žA-Ž][a-žA-Ž\s+]*$/',$n)){
         $greska="Naziv sadrzi samo slova!";
@@ -273,7 +280,10 @@ if(isset($_REQUEST['dodavanjek'])){
     $kontakt->appendChild($xml->createElement('cijena',$c));
     $xml->save("Kusluge.xml");
 }
+    $autorid= $veza->query("SELECT id FROM `korisnici` WHERE username LIKE '$autor';");
+        $aid=$autorid->fetchColumn();
      $rezultat = $veza->query("INSERT INTO `kusluge` (`id`, `nazivusluge`, `cijena`) VALUES (NULL, '$n', '$c');");
+     $upitopis= $veza->query("INSERT INTO `uslugedetalji` (`nazivusluge`, `opis`, `autor`) VALUES ('$n', 'Ovo je defaultni opis usluge. Stranica je u izradi. Pravi opisi naknadno ce biti dodani.', '$aid');");
     
       if (!$rezultat) {
           $greska = $veza->errorInfo();
@@ -329,7 +339,7 @@ print "<br>";
    
     
 //CJENOVNIK Kozmeticke
-if (file_exists("Kusluge.xml")) {
+//if (file_exists("Kusluge.xml")) {
 $xml = simplexml_load_file("Kusluge.xml");
 
 print "<table class='admintabela'>";
@@ -364,8 +374,9 @@ print "<form>";
 print "</table>";
 print "<br><div style='float:left;'>".$greska."</div>";
 
-}   
- 
+//}
+    
+
     ?>  
  </div>
 </div>

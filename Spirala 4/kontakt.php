@@ -36,8 +36,8 @@ header("location: admin.php");
 <ul id="TopNav" class="topnav">
 	
 	<li> <a id="trenutni" href="index.php" > POČETNA </a></li>
-	<li> <a href="#" onclick="prikaz('onama.html')"> O NAMA </a></li>
-	<li> <a href="#" onclick="prikaz('ffusluge.php')"> FRIZERSKE USLUGE </a></li>
+	<li> <a href="onama.php"> O NAMA </a></li>
+	<li> <a href="ffusluge.php"> FRIZERSKE USLUGE </a></li>
 	<li> <a href="kusluge1.php"> KOZMETIČKE USLUGE </a></li>
 	<li> <a href="kontakt.php" > KONTAKT </a></li>
    	<li> <a href="pretraga.php" > PRETRAGA </a></li>

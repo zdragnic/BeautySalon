@@ -37,8 +37,8 @@ header("location: admin.php");
 <ul id="TopNav" class="topnav">
 	
 	<li> <a id="trenutni" href="index.php"> POČETNA </a></li>
-	<li> <a href="#" onclick="prikaz('onama.html')"> O NAMA </a></li>
-	<li> <a href="#" onclick="prikaz('ffusluge.php')"> FRIZERSKE USLUGE </a></li>
+	<li> <a href="onama.php"> O NAMA </a></li>
+	<li> <a href="ffusluge.php"> FRIZERSKE USLUGE </a></li>
 	<li> <a href="kusluge1.php"> KOZMETIČKE USLUGE </a></li>
 	<li> <a href="kontakt.php" > KONTAKT </a></li>
    	<li> <a href="pretraga.php" > PRETRAGA </a></li>
@@ -78,18 +78,29 @@ header("location: admin.php");
 		<div class="underline" style="width: 70%;margin-right: 5%;	margin-left: 5%;"> <h1>Kozmetičke usluge</h1></div>
         
 		<?php
-        if (file_exists("Kusluge.xml")) {
-        $xml = simplexml_load_file("Kusluge.xml");
+        $veza = new PDO("mysql:dbname=beautysalon;host=localhost;charset=utf8", "zerina", "wtspirala4");
+        $veza->exec("set names utf8");
+        $upit= $veza->query("SELECT id, nazivusluge, cijena FROM `kusluge` order by id asc");
+        
+        if (!$upit) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }    
+        //if (file_exists("Kusluge.xml")) {
+        //$xml = simplexml_load_file("Kusluge.xml");
+        
         print "<table style='text-align:left;  margin-right:10%; width:80%;'>";
         print "<tr><th>Naziv usluge</th><th>Cijena</th></tr><br>";
        
-        foreach($xml->kusluga as $kusluga){
-        print "<tr><td><a href='kusluge1.php?q=$kusluga->naziv'> ".$kusluga->naziv." </a></td><td>".$kusluga->cijena."KM</td></tr>";
+        foreach($upit as $kusluga){
+        $k= $kusluga['nazivusluge'];
+        print "<tr><td><a href='kusluge1.php?q=$k'> ".$kusluga['nazivusluge']." </a></td><td>".$kusluga['cijena']."KM</td></tr>";
 
         }
          print "</table>";
                
-        }
+        
         ?>
        
 	</div>
@@ -111,10 +122,17 @@ $veza->exec("set names utf8");
         }
 print " <h3>$q</h3>";
 
-$upit= $veza->query("SELECT opis FROM `uslugedetalji` WHERE `nazivusluge` LIKE '$q'");   
+$upit= $veza->query("SELECT opis FROM `uslugedetalji` WHERE `nazivusluge` LIKE '$q'");  
+$upit1= $veza->query("SELECT autor FROM `uslugedetalji` WHERE `nazivusluge` LIKE '$q'");  
+$up1= $upit1->fetchColumn();
 $up= $upit->fetchColumn();
-    
+
+$autor= $veza->query("SELECT username FROM `korisnici` WHERE `id` LIKE '$up1'"); 
+$au=$autor->fetchColumn();
     echo $up;
+        echo "<br><br>";
+        if($au != "")
+        echo "Autor: ".$au;
     ?>
 </div>
 
