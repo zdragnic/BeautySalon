@@ -207,4 +207,6 @@ Newsletter.xml - mailovi sa newsletter fome
 
 beautysalon.sql - exportovana baza
 
+Folder WebServis- unutar ovog foldera nalazi se restmetoda.php fajl, te screenshotovi iz Postmana
+
 
