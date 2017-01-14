@@ -145,3 +145,66 @@ Kontakt.xml - poruke sa kontakt podstranice
 
 Newsletter.xml - mailovi sa newsletter fome
 
+## SPIRALA 4
+
+**I  - Šta je urađeno?** 
+Napravljena je baza podataka sa 3 uvezane tabele (kusluge, uslugedetalji, korisnici), ostale tabele nisu povezane al postoje.Uradjeno je da se na klik dugmeta XMLtoDB, na admin panelu, prebace podaci iz xmla u db koji ne postoje.Prepravljene su sve skripte da sada rade sa bazom. Napravljen je web servis(u folderu web servis).Servis je testiran pomocu Postman aplikacije.Uradjen je deploy stranice na openshift. LINK ----> http://beautysalon-beautysalon.44fs.preview.openshiftapps.com/
+
+**II  - Šta nije urađeno?**
+/
+
+**III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)**
+/
+
+**IV  - Bug-ovi koje ste primijetili ali ne znate rješenje**
+/
+
+**V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi**
+
+
+
+index.php - Pocetna stranica 
+
+onama.php - Podstranica koja sadrzi informacije o salonu.
+
+kusluge1.php - Podstranica koja sadrzi informacije o kozmetickim uslugama koje salon nudi.
+
+ffusluge.php - Podstranica koja sadrzi informacije o frizerskim uslugama salona.
+
+kontakt.php - Podstranica koja sadrzi formu za slanje poruka, mapu sa lokacijom.
+
+Folder Slike- sadrzi slike sa stranice
+
+style.css - sadrzi css kod za stranicu
+
+js.js - javascript fajl sa svim funkcijama
+
+pretraga.php - podstranica za pretragu
+
+login.php , logout.php, session.php - fajlovi potrebni za login
+
+livesearch.php - php fajl za pretragu
+
+admin.php- adminova pocetna stranica
+
+radsapodacima.php - adminova podstranica za editovanje podataka
+
+anketarez.php - rezultati ankete koji se prikazuju korisniku klikom na dugme rezultati
+
+fpdf181 folder - fajl za rad sa pdfom
+
+lib - fajlovi potrebni za piechart na rezultatima ankete
+
+Admin.xml - admin podaci
+
+Anketa.xml - rezultati ankete
+
+Fuskuge.xml i Kusluge.xml - usluge salona
+
+Kontakt.xml - poruke sa kontakt podstranice
+
+Newsletter.xml - mailovi sa newsletter fome
+
+beautysalon.sql - exportovana baza
+
+
